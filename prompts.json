@@ -8,7 +8,10 @@
     "releaseDate": "2026-06-23",
     "status": "preview",
     "publicLaunch": "early July 2026",
-    "announcedAt": "Volcano Engine FORCE conference"
+    "announcedAt": "Volcano Engine FORCE conference",
+    "galleryUrl": "https://tosea.ai/prompts/seedance-2-5",
+    "galleryLive": false,
+    "fallbackUrl": "https://tosea.ai/blog/seedance-2-5-bytedance-ai-video-model-guide"
   },
   "entries": [
     {

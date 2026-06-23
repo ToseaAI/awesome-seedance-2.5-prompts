@@ -111,6 +111,7 @@ STR = {
         "prompt_label": "Prompt",
         "show_prompt": "Show full prompt",
         "try_on_tosea": "View on Tosea",
+        "read_guide": "Read the Seedance 2.5 guide",
         "by_author": "by",
         "params": "Parameters",
         "template_badge": "starter template",
@@ -164,6 +165,7 @@ STR = {
         "prompt_label": "Prompt",
         "show_prompt": "展开完整 prompt",
         "try_on_tosea": "在 Tosea 浏览",
+        "read_guide": "阅读 Seedance 2.5 指南",
         "by_author": "作者",
         "params": "参数",
         "template_badge": "起手模板",
@@ -180,7 +182,7 @@ def slug_anchor(label: str) -> str:
     return s.replace(" ", "-").strip("-")
 
 
-def render_entry(s: dict, lang: str, e: dict, n: int) -> str:
+def render_entry(s: dict, lang: str, e: dict, n: int, gallery_live: bool) -> str:
     title = e["title"][lang]
     author = e["author"]["displayName"]
     p = e.get("parameters", {})
@@ -211,8 +213,11 @@ def render_entry(s: dict, lang: str, e: dict, n: int) -> str:
     if pstr:
         out.append(f'**{s["params"]}:** {pstr}')
         out.append("")
-    out.append(f'**[→ {s["try_on_tosea"]}]({e["toseaUrl"]})**')
-    out.append("")
+    # Per-entry deep links only render once the gallery is live (avoids 404s
+    # before tosea.ai/prompts/seedance-2-5 exists). toseaUrl stays in the data.
+    if gallery_live:
+        out.append(f'**[→ {s["try_on_tosea"]}]({e["toseaUrl"]})**')
+        out.append("")
     out.append("---")
     out.append("")
     return "\n".join(out)
@@ -222,6 +227,11 @@ def render(lang: str, data: dict) -> str:
     s = STR[lang]
     labels = CATEGORY_LABELS[lang]
     entries = data["entries"]
+    m = data["model"]
+    gallery_live = m.get("galleryLive", False)
+    # Until the gallery page exists, point CTAs at the live blog guide instead
+    # of the 404 gallery — captures the GitHub backlink on a real page.
+    cta_url = m.get("galleryUrl") if gallery_live else m.get("fallbackUrl", BLOG_URL)
     buckets: dict[str, list[dict]] = {}
     for e in entries:
         buckets.setdefault(e["category"], []).append(e)
@@ -234,7 +244,10 @@ def render(lang: str, data: dict) -> str:
     o.append("")
     o.append('<p align="center">')
     o.append('  <a href="LICENSE"><img alt="License: CC BY 4.0" src="https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg"></a>')
-    o.append(f'  <a href="{TOSEA_PROMPTS_URL}"><img alt="Gallery on Tosea.ai" src="https://img.shields.io/badge/Gallery-Tosea.ai-000000?style=flat"></a>')
+    if gallery_live:
+        o.append(f'  <a href="{m["galleryUrl"]}"><img alt="Gallery on Tosea.ai" src="https://img.shields.io/badge/Gallery-Tosea.ai-000000?style=flat"></a>')
+    else:
+        o.append(f'  <a href="{cta_url}"><img alt="Seedance 2.5 guide on Tosea.ai" src="https://img.shields.io/badge/Guide-Tosea.ai-000000?style=flat"></a>')
     o.append('  <img alt="Status: preview" src="https://img.shields.io/badge/Seedance%202.5-preview%20%C2%B7%20public%20launch%20July%202026-orange">')
     o.append(f'  <a href="{REPO_URL}/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/ToseaAI/awesome-seedance-2.5-prompts?style=flat&color=yellow"></a>')
     o.append('</p>')
@@ -256,14 +269,15 @@ def render(lang: str, data: dict) -> str:
         label = labels[c]
         o.append(f'- [{label}](#{slug_anchor(label)}) · *{s["cat_count"].format(n=len(buckets[c]))}*')
     o.append("")
-    o.append(f'> {s["count_line"].format(n=len(entries), k=len(ordered))}. [→ {s["try_on_tosea"]}]({TOSEA_PROMPTS_URL})')
+    cta_label = s["try_on_tosea"] if gallery_live else s["read_guide"]
+    o.append(f'> {s["count_line"].format(n=len(entries), k=len(ordered))}. [→ {cta_label}]({cta_url})')
     o.append("")
     # categories
     for c in ordered:
         o.append(f'## {labels[c]}')
         o.append("")
         for i, e in enumerate(buckets[c], 1):
-            o.append(render_entry(s, lang, e, i))
+            o.append(render_entry(s, lang, e, i, gallery_live))
     # contributing + license
     o.append(f'## {s["contributing_head"]}')
     o.append("")

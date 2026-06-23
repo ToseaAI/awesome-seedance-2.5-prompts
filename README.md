@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="LICENSE"><img alt="License: CC BY 4.0" src="https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg"></a>
-  <a href="https://tosea.ai/prompts/seedance-2-5"><img alt="Gallery on Tosea.ai" src="https://img.shields.io/badge/Gallery-Tosea.ai-000000?style=flat"></a>
+  <a href="https://tosea.ai/blog/seedance-2-5-bytedance-ai-video-model-guide"><img alt="Seedance 2.5 guide on Tosea.ai" src="https://img.shields.io/badge/Guide-Tosea.ai-000000?style=flat"></a>
   <img alt="Status: preview" src="https://img.shields.io/badge/Seedance%202.5-preview%20%C2%B7%20public%20launch%20July%202026-orange">
   <a href="https://github.com/ToseaAI/awesome-seedance-2.5-prompts/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/ToseaAI/awesome-seedance-2.5-prompts?style=flat&color=yellow"></a>
 </p>
@@ -33,7 +33,7 @@ For the full breakdown and how it compares, read our [Seedance 2.5 guide](https:
 - [Region Editing](#region-editing) · *1 prompts*
 - [Camera & Cinematic](#camera--cinematic) · *2 prompts*
 
-> 8 starter prompts across 5 categories. [→ View on Tosea](https://tosea.ai/prompts/seedance-2-5)
+> 8 starter prompts across 5 categories. [→ Read the Seedance 2.5 guide](https://tosea.ai/blog/seedance-2-5-bytedance-ai-video-model-guide)
 
 ## Text-to-Video
 
@@ -54,8 +54,6 @@ A starter text-to-video template that exercises the 30-second single-clip capabi
 
 **Parameters:** duration: 30s · aspect: 16:9 · refs: 0
 
-**[→ View on Tosea](https://tosea.ai/prompts/seedance-2-5#1-cinematic-city-dawn-oner)**
-
 ---
 
 ### 02. Product reveal on a seamless studio sweep
@@ -74,8 +72,6 @@ A clean commercial T2V template — describe the product, the move, and the ligh
 </details>
 
 **Parameters:** duration: 12s · aspect: 16:9 · refs: 0
-
-**[→ View on Tosea](https://tosea.ai/prompts/seedance-2-5#2-product-reveal-seamless)**
 
 ---
 
@@ -98,8 +94,6 @@ Image-to-video template: supply one portrait as the first frame and describe onl
 
 **Parameters:** duration: 8s · aspect: 9:16 · refs: 1
 
-**[→ View on Tosea](https://tosea.ai/prompts/seedance-2-5#3-still-portrait-to-life)**
-
 ---
 
 ## Multi-Reference Consistency
@@ -121,8 +115,6 @@ Multi-reference template exercising the 50-reference ceiling: feed character tur
 
 **Parameters:** duration: 20s · aspect: 16:9 · refs: 6
 
-**[→ View on Tosea](https://tosea.ai/prompts/seedance-2-5#4-character-consistency-refset)**
-
 ---
 
 ### 02. Brand-consistent ad from a reference kit
@@ -141,8 +133,6 @@ Feed product shots, packaging, logo, and brand colors so the same product and pa
 </details>
 
 **Parameters:** duration: 15s · aspect: 16:9 · refs: 8
-
-**[→ View on Tosea](https://tosea.ai/prompts/seedance-2-5#5-brand-ad-reference-kit)**
 
 ---
 
@@ -165,8 +155,6 @@ Region-editing template: replace only the on-screen subject/product while preser
 
 **Parameters:** duration: match source · aspect: match source · refs: 1
 
-**[→ View on Tosea](https://tosea.ai/prompts/seedance-2-5#6-region-swap-subject)**
-
 ---
 
 ## Camera & Cinematic
@@ -188,8 +176,6 @@ A camera-language template — name the lens, the move, and the focus change exp
 
 **Parameters:** duration: 10s · aspect: 16:9 · refs: 0
 
-**[→ View on Tosea](https://tosea.ai/prompts/seedance-2-5#7-anamorphic-dolly-rack-focus)**
-
 ---
 
 ### 02. Beat-synced animated explainer segment
@@ -208,8 +194,6 @@ A motion-graphics template for short explainers: describe the concept, the beats
 </details>
 
 **Parameters:** duration: 12s · aspect: 16:9 · refs: 0
-
-**[→ View on Tosea](https://tosea.ai/prompts/seedance-2-5#8-animated-explainer-beat)**
 
 ---
 
