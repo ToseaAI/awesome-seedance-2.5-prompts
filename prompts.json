@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "model": {
+    "name": "Seedance 2.5",
+    "vendor": "ByteDance",
+    "family": "Doubao Video Generation",
+    "editionNumber": 0,
+    "releaseDate": "2026-06-23",
+    "status": "preview",
+    "publicLaunch": "early July 2026",
+    "announcedAt": "Volcano Engine FORCE conference"
+  },
+  "entries": [
+    {
+      "index": 1,
+      "id": "1-cinematic-city-dawn-oner",
+      "title": { "en": "Cinematic city dawn — a single 30-second oner", "zh": "城市黎明长镜头 · 30 秒一镜到底" },
+      "category": "text-to-video",
+      "author": { "displayName": "Tosea Team", "xHandle": null },
+      "sourceUrl": null,
+      "promptType": "template",
+      "description": {
+        "en": "A starter text-to-video template that exercises the 30-second single-clip capability with one continuous camera move.",
+        "zh": "文生视频起手模板,用一段连续运镜验证 30 秒单镜直出能力。"
+      },
+      "prompt": "A single continuous 30-second shot of a quiet metropolis at dawn. Open on wet asphalt reflecting the first warm light, then a slow forward dolly down an empty avenue as the city wakes: shop shutters lifting, steam rising from a vendor cart, a lone cyclist crossing frame. Soft golden-hour key light, long shadows, gentle volumetric haze. Anamorphic look, shallow depth of field, subtle film grain. Camera: steady ground-level dolly, no cuts. Duration: 30s. Aspect ratio 16:9.",
+      "parameters": { "duration": "30s", "aspectRatio": "16:9", "references": 0 },
+      "featured": true,
+      "publishedAt": "2026-06-23",
+      "toseaUrl": "https://tosea.ai/prompts/seedance-2-5#1-cinematic-city-dawn-oner"
+    },
+    {
+      "index": 2,
+      "id": "2-product-reveal-seamless",
+      "title": { "en": "Product reveal on a seamless studio sweep", "zh": "无缝棚拍产品揭示" },
+      "category": "text-to-video",
+      "author": { "displayName": "Tosea Team", "xHandle": null },
+      "sourceUrl": null,
+      "promptType": "template",
+      "description": {
+        "en": "A clean commercial T2V template — describe the product, the move, and the light; keep the background seamless for compositing.",
+        "zh": "干净的商业文生视频模板 —— 描述产品、运镜与布光,背景保持无缝便于后期合成。"
+      },
+      "prompt": "Studio product film of {PRODUCT}. The object floats and rotates slowly on a seamless gradient sweep (deep charcoal to soft graphite). A single large softbox key from upper left, subtle rim light tracing the silhouette, gentle specular highlights rolling across the surface as it turns. Macro detail on texture and edges. Camera: slow 180-degree orbit, locked focus on the product. Photoreal, commercial-grade, no text overlays. Duration: 12s. Aspect ratio 16:9.",
+      "parameters": { "duration": "12s", "aspectRatio": "16:9", "references": 0 },
+      "featured": false,
+      "publishedAt": "2026-06-23",
+      "toseaUrl": "https://tosea.ai/prompts/seedance-2-5#2-product-reveal-seamless"
+    },
+    {
+      "index": 3,
+      "id": "3-still-portrait-to-life",
+      "title": { "en": "Bring a still portrait to life", "zh": "让静态人像动起来" },
+      "category": "image-to-video",
+      "author": { "displayName": "Tosea Team", "xHandle": null },
+      "sourceUrl": null,
+      "promptType": "template",
+      "description": {
+        "en": "Image-to-video template: supply one portrait as the first frame and describe only the motion you want added.",
+        "zh": "图生视频模板:用一张人像作为首帧,只描述你想添加的动作。"
+      },
+      "prompt": "Use the supplied portrait as the first frame. Add natural, subtle life: slow breathing, a soft blink, a faint smile forming, a few strands of hair drifting in a light breeze. Keep the identity, lighting, and framing exactly as in the reference image — no change to facial structure, wardrobe, or background. Gentle handheld micro-movement on the camera. Duration: 8s. Aspect ratio 9:16.",
+      "parameters": { "duration": "8s", "aspectRatio": "9:16", "references": 1 },
+      "featured": true,
+      "publishedAt": "2026-06-23",
+      "toseaUrl": "https://tosea.ai/prompts/seedance-2-5#3-still-portrait-to-life"
+    },
+    {
+      "index": 4,
+      "id": "4-character-consistency-refset",
+      "title": { "en": "Hold a character across a scene with a reference set", "zh": "用参考素材集锁定角色一致性" },
+      "category": "multi-reference",
+      "author": { "displayName": "Tosea Team", "xHandle": null },
+      "sourceUrl": null,
+      "promptType": "template",
+      "description": {
+        "en": "Multi-reference template exercising the 50-reference ceiling: feed character turnarounds + wardrobe + a style frame to keep one character on-model.",
+        "zh": "多参考模板,用于验证 50 素材上限:输入角色转面图 + 服装 + 风格帧,让同一角色全程不走形。"
+      },
+      "prompt": "References: [character turnaround images], [wardrobe close-ups], [one lighting/style frame]. Generate a 20-second scene in which this exact character walks through a sunlit warehouse toward a single shaft of window light, stops, and looks up. The character's face, hairstyle, and outfit must match the references across every frame. Cool ambient fill, one warm hard light source. Camera: slow tracking push-in. Duration: 20s. Aspect ratio 16:9.",
+      "parameters": { "duration": "20s", "aspectRatio": "16:9", "references": 6 },
+      "featured": true,
+      "publishedAt": "2026-06-23",
+      "toseaUrl": "https://tosea.ai/prompts/seedance-2-5#4-character-consistency-refset"
+    },
+    {
+      "index": 5,
+      "id": "5-brand-ad-reference-kit",
+      "title": { "en": "Brand-consistent ad from a reference kit", "zh": "用品牌素材包生成一致性广告" },
+      "category": "multi-reference",
+      "author": { "displayName": "Tosea Team", "xHandle": null },
+      "sourceUrl": null,
+      "promptType": "template",
+      "description": {
+        "en": "Feed product shots, packaging, logo, and brand colors so the same product and palette stay locked across the spot.",
+        "zh": "输入产品图、包装、logo 与品牌色,让同一产品与配色在整支广告中保持锁定。"
+      },
+      "prompt": "References: [product hero shots], [packaging], [logo lockup], [brand color swatches]. Generate a 15-second lifestyle ad: the product sits on a sunlit kitchen counter, a hand enters frame to pick it up, and the camera follows it toward a window. Product geometry, label, and brand colors must match the references exactly — no drift in logo or packaging. Warm naturalistic light, airy color grade. Camera: smooth follow with a rack focus to the label. Duration: 15s. Aspect ratio 16:9.",
+      "parameters": { "duration": "15s", "aspectRatio": "16:9", "references": 8 },
+      "featured": false,
+      "publishedAt": "2026-06-23",
+      "toseaUrl": "https://tosea.ai/prompts/seedance-2-5#5-brand-ad-reference-kit"
+    },
+    {
+      "index": 6,
+      "id": "6-region-swap-subject",
+      "title": { "en": "Swap a subject without touching the shot", "zh": "替换主体而不改动镜头" },
+      "category": "region-edit",
+      "author": { "displayName": "Tosea Team", "xHandle": null },
+      "sourceUrl": null,
+      "promptType": "template",
+      "description": {
+        "en": "Region-editing template: replace only the on-screen subject/product while preserving the original motion, camera, and lighting.",
+        "zh": "局部编辑模板:仅替换画面中的主体/产品,保留原片的动作、机位与灯光。"
+      },
+      "prompt": "Take the supplied source clip. Replace only {ORIGINAL_SUBJECT} with {NEW_SUBJECT}. Do not change the camera movement, the timing, the lighting, the shadows, or the background. Match the new subject's scale, contact shadows, and motion to the original so the edit is seamless. Output the full edited clip at the source resolution and duration.",
+      "parameters": { "duration": "match source", "aspectRatio": "match source", "references": 1 },
+      "featured": false,
+      "publishedAt": "2026-06-23",
+      "toseaUrl": "https://tosea.ai/prompts/seedance-2-5#6-region-swap-subject"
+    },
+    {
+      "index": 7,
+      "id": "7-anamorphic-dolly-rack-focus",
+      "title": { "en": "Anamorphic dolly-in with a rack focus", "zh": "变形宽银幕推轨 + 焦点转移" },
+      "category": "camera-cinematic",
+      "author": { "displayName": "Tosea Team", "xHandle": null },
+      "sourceUrl": null,
+      "promptType": "template",
+      "description": {
+        "en": "A camera-language template — name the lens, the move, and the focus change explicitly to get deliberate cinematography.",
+        "zh": "运镜语言模板 —— 明确写出镜头、运动与焦点变化,获得有意识的电影感摄影。"
+      },
+      "prompt": "A 10-second cinematic shot of {SCENE}. Begin wide with the foreground out of focus; execute a slow dolly-in while racking focus from a foreground object to the subject in the midground. 2.39:1 anamorphic framing with horizontal lens flares, shallow depth of field, soft halation on highlights. Moody low-key lighting with one practical light motivating the key. Camera: motorized dolly, smooth ease-in. Duration: 10s. Aspect ratio 16:9 (letterboxed to 2.39:1).",
+      "parameters": { "duration": "10s", "aspectRatio": "16:9", "references": 0 },
+      "featured": false,
+      "publishedAt": "2026-06-23",
+      "toseaUrl": "https://tosea.ai/prompts/seedance-2-5#7-anamorphic-dolly-rack-focus"
+    },
+    {
+      "index": 8,
+      "id": "8-animated-explainer-beat",
+      "title": { "en": "Beat-synced animated explainer segment", "zh": "卡点动画解说片段" },
+      "category": "camera-cinematic",
+      "author": { "displayName": "Tosea Team", "xHandle": null },
+      "sourceUrl": null,
+      "promptType": "template",
+      "description": {
+        "en": "A motion-graphics template for short explainers: describe the concept, the beats, and a clean visual system.",
+        "zh": "短解说的动态图形模板:描述概念、节奏点与一套干净的视觉系统。"
+      },
+      "prompt": "A 12-second animated explainer segment about {CONCEPT}. Clean flat-design motion graphics: simple geometric icons assembling and transforming on each beat, a restrained two-color palette plus one accent, generous negative space, smooth ease-in-out transitions. Numbers and labels animate in crisply and legibly. Light, optimistic pacing. No live action. Duration: 12s. Aspect ratio 16:9.",
+      "parameters": { "duration": "12s", "aspectRatio": "16:9", "references": 0 },
+      "featured": false,
+      "publishedAt": "2026-06-23",
+      "toseaUrl": "https://tosea.ai/prompts/seedance-2-5#8-animated-explainer-beat"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+name: Add a prompt
+description: Suggest a Seedance 2.5 video prompt to include in the collection
+title: "[prompt] <short title>"
+labels: ["prompt-suggestion"]
+body:
+  - type: textarea
+    id: prompt
+    attributes:
+      label: Prompt
+      description: The full prompt text, verbatim.
+      placeholder: A single continuous 30-second shot of ...
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - text-to-video
+        - image-to-video
+        - multi-reference
+        - region-edit
+        - camera-cinematic
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source URL (optional)
+      description: Link to the original post if this prompt was shared publicly. Leave blank for an original template.
+      placeholder: https://x.com/...
+  - type: input
+    id: author
+    attributes:
+      label: Author display name
+      description: The name to credit. Use your own name for original prompts.
+    validations:
+      required: true
+  - type: input
+    id: output
+    attributes:
+      label: Output video/GIF link (optional)
+      description: If you have generated this with the public model, link the result so we can mark it verified.
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: This prompt is mine, or was discovered from a public post I have linked.
+          required: true
