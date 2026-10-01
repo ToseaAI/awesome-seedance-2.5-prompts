@@ -27,13 +27,13 @@ For the full breakdown and how it compares, read our [Seedance 2.5 guide](https:
 
 ## Contents
 
-- [Text-to-Video](#text-to-video) · *2 prompts*
+- [Text-to-Video](#text-to-video) · *3 prompts*
 - [Image-to-Video](#image-to-video) · *1 prompts*
 - [Multi-Reference Consistency](#multi-reference-consistency) · *2 prompts*
 - [Region Editing](#region-editing) · *1 prompts*
 - [Camera & Cinematic](#camera--cinematic) · *2 prompts*
 
-> 8 starter prompts across 5 categories. [→ Read the Seedance 2.5 guide](https://tosea.ai/blog/seedance-2-5-bytedance-ai-video-model-guide)
+> 9 starter prompts across 5 categories. [→ Read the Seedance 2.5 guide](https://tosea.ai/blog/seedance-2-5-bytedance-ai-video-model-guide)
 
 ## Text-to-Video
 
@@ -72,6 +72,25 @@ A clean commercial T2V template — describe the product, the move, and the ligh
 </details>
 
 **Parameters:** duration: 12s · aspect: 16:9 · refs: 0
+
+---
+
+### 03. Rainy alley oner — 15s continuous push-in
+
+*by **leony (Soutine)*** · `starter template`
+
+<a id="9-rainy-alley-oner-no-text"></a>
+
+Starter text-to-video template: one continuous rainy-alley push-in with a mid-clip doorway beat and a hard no-text constraint.
+
+<details>
+<summary><b>Prompt</b> — Show full prompt</summary>
+
+<blockquote>A single continuous 15-second shot down a narrow rainy alley at night. Open on wet cobblestones reflecting neon signs overhead, camera slowly pushing forward at chest height. Mid-clip (around 7s): a wooden doorway on the left swings open and a cyclist briefly crosses through the frame, kicking up shallow puddles. Continue the same unbroken push until the alley opens onto a quiet canal. Soft volumetric mist, practical neon rim light, cinematic 35mm look, shallow depth of field. No on-screen text, no logos, no subtitles, no watermark.</blockquote>
+
+</details>
+
+**Parameters:** duration: 15s · aspect: 16:9 · refs: 0
 
 ---
 
