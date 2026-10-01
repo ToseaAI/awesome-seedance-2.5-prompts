@@ -27,13 +27,13 @@ Seedance 2.5 是字节跳动新一代视频模型。据 FORCE 主题演讲,三�
 
 ## 目录
 
-- [文生视频](#文生视频) · *2 条*
+- [文生视频](#文生视频) · *3 条*
 - [图生视频](#图生视频) · *1 条*
 - [多参考一致性](#多参考一致性) · *2 条*
 - [局部编辑](#局部编辑) · *1 条*
 - [运镜与电影感](#运镜与电影感) · *2 条*
 
-> 共 8 条起手 prompt,覆盖 5 个分类. [→ 阅读 Seedance 2.5 指南](https://tosea.ai/blog/seedance-2-5-bytedance-ai-video-model-guide)
+> 共 9 条起手 prompt,覆盖 5 个分类. [→ 阅读 Seedance 2.5 指南](https://tosea.ai/blog/seedance-2-5-bytedance-ai-video-model-guide)
 
 ## 文生视频
 
@@ -72,6 +72,25 @@ Seedance 2.5 是字节跳动新一代视频模型。据 FORCE 主题演讲,三�
 </details>
 
 **参数:** duration: 12s · aspect: 16:9 · refs: 0
+
+---
+
+### 03. 雨巷长镜头 · 15 秒连续推进
+
+*作者 **leony (Soutine)*** · `起手模板`
+
+<a id="9-rainy-alley-oner-no-text"></a>
+
+文生视频起步模板：雨巷连续推进长镜头，中段门口节拍，并强制禁止屏幕文字。
+
+<details>
+<summary><b>Prompt</b> — 展开完整 prompt</summary>
+
+<blockquote>A single continuous 15-second shot down a narrow rainy alley at night. Open on wet cobblestones reflecting neon signs overhead, camera slowly pushing forward at chest height. Mid-clip (around 7s): a wooden doorway on the left swings open and a cyclist briefly crosses through the frame, kicking up shallow puddles. Continue the same unbroken push until the alley opens onto a quiet canal. Soft volumetric mist, practical neon rim light, cinematic 35mm look, shallow depth of field. No on-screen text, no logos, no subtitles, no watermark.</blockquote>
+
+</details>
+
+**参数:** duration: 15s · aspect: 16:9 · refs: 0
 
 ---
 
